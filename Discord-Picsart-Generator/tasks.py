@@ -1,9 +1,8 @@
 import random,string,httpx,time
 
 def solve(clientkey:str,service:str) -> dict:
-    
+    #Took From Notlit Code
     if 'capsolver' in service:
-        # Uses httpx to get results from capsolver instead of the capmonster lib idk why but this works really better and really less bot errors
         resp = httpx.post('https://api.capsolver.com/createTask',json={
     "clientKey": clientkey,
     "task": {
